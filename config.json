@@ -1,9 +1,0 @@
-{
-  "NAME": "John",
-  "SURNAME": "Doe",
-  "AGE": 105,
-  "props": {
-    "height": "190cm",
-    "weight": "295kg"
-  }
-}

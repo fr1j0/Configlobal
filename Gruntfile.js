@@ -29,15 +29,24 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
+
     configlobal: {
-      default_options: {
+      dev: {
         options: {
           target: 'js/bundle.js',
-          config: 'config.json',
-          global: 'CONFIG100',
-          es6: true
+          config: 'config.dev.json',
+          global: 'CONFIG',
+          es6: false
         }
-      }
+      },
+      dist: {
+        options: {
+          target: 'js/bundle.js',
+          config: 'config.dist.json',
+          global: 'CONFIG',
+          es6: false
+        }
+      },
     },
 
     // Unit tests.
@@ -60,6 +69,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'configlobal', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['configlobal']);
+  grunt.registerTask('dev', ['configlobal:dev']);
+  grunt.registerTask('dist', ['configlobal:dist']);
 
 };
