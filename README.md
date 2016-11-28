@@ -1,6 +1,6 @@
 # grunt-configlobal
 
-> Reads config json file, creates global vars from its content and injects it into a target bundle.
+> Reads config json file, creates global object from its content and injects it into a target bundle.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
